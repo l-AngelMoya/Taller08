@@ -1,6 +1,4 @@
-package patron.structural;
-
-import java.util.*;
+package patron.estructural;
 
 /**
  * 
@@ -23,7 +21,12 @@ public class NotaDeCreditoAdapter extends AdapteeFactura {
      */
     public String getDetalle() {
         // TODO implement here
-        return "";
+        return this.detalleModificacion;
+    }
+    
+    public boolean setDetalle(String detalle) {
+    		this.detalleModificacion=detalle;
+    		return true;
     }
 
 }

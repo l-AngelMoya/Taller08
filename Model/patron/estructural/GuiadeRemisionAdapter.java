@@ -1,6 +1,5 @@
-package patron.structural;
+package patron.estructural;
 
-import java.util.*;
 
 /**
  * 
@@ -27,15 +26,14 @@ public class GuiadeRemisionAdapter extends AdapteeFactura {
      * @return
      */
     public String getDestino() {
-        // TODO implement here
-        return "";
+        return this.destino;
     }
 
     /**
      * @param String str 
      * @return
      */
-    public boolean setDestino(void String str) {
+    public boolean setDestino(String str) {
         // TODO implement here
         return false;
     }
@@ -45,14 +43,14 @@ public class GuiadeRemisionAdapter extends AdapteeFactura {
      */
     public String getPlaca() {
         // TODO implement here
-        return "";
+        return this.placa;
     }
 
     /**
      * @param String str 
      * @return
      */
-    public boolean setPlaca(void String str) {
+    public boolean setPlaca(String str) {
         // TODO implement here
         return false;
     }

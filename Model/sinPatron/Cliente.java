@@ -1,6 +1,5 @@
 package sinPatron;
 
-import java.util.*;
 
 /**
  * 
@@ -28,14 +27,14 @@ public class Cliente {
      */
     public String getID() {
         // TODO implement here
-        return "";
+        return this.id;
     }
 
     /**
      * @param String id 
      * @return
      */
-    public boolean setID(void String id) {
+    public boolean setID(String id) {
         // TODO implement here
         return false;
     }
@@ -45,14 +44,14 @@ public class Cliente {
      */
     public String getNombre() {
         // TODO implement here
-        return "";
+        return this.nombre;
     }
 
     /**
      * @param String str 
      * @return
      */
-    public boolean setNombre(void String str) {
+    public boolean setNombre(String str) {
         // TODO implement here
         return false;
     }

@@ -1,6 +1,8 @@
-package patron.structural;
+package patron.estructural;
 
 import java.util.*;
+
+import patron.comportamiento.FacturaStrategy;
 
 /**
  * 
@@ -16,7 +18,7 @@ public class AdapteeFactura extends FacturaStrategy {
     /**
      * 
      */
-    private int numeroAutorización;
+    private int numeroAutorizacion;
 
     /**
      * 
@@ -41,7 +43,7 @@ public class AdapteeFactura extends FacturaStrategy {
     /**
      * 
      */
-    private LinkedList productos;
+    private LinkedList<String> productos;
 
     /**
      * 
@@ -51,9 +53,9 @@ public class AdapteeFactura extends FacturaStrategy {
     /**
      * @return
      */
-    public int getNumeroAutorización() {
+    public int getNumeroAutorizacion() {
         // TODO implement here
-        return 0;
+        return this.numeroAutorizacion;
     }
 
     /**
@@ -61,7 +63,7 @@ public class AdapteeFactura extends FacturaStrategy {
      */
     public String getNombreCliente() {
         // TODO implement here
-        return "";
+        return this.nombreCliente;
     }
 
     /**
@@ -69,7 +71,7 @@ public class AdapteeFactura extends FacturaStrategy {
      */
     public String getClaveAcceso() {
         // TODO implement here
-        return "";
+        return this.claveAcceso;
     }
 
     /**
@@ -77,7 +79,7 @@ public class AdapteeFactura extends FacturaStrategy {
      */
     public String getCodigo() {
         // TODO implement here
-        return "";
+        return this.codigo;
     }
 
     /**
@@ -85,15 +87,15 @@ public class AdapteeFactura extends FacturaStrategy {
      */
     public Date getFecha() {
         // TODO implement here
-        return null;
+        return this.fecha;
     }
 
     /**
      * @return
      */
-    public LinkedList getProductos() {
+    public LinkedList<String> getProductos() {
         // TODO implement here
-        return null;
+        return this.productos;
     }
 
     /**
@@ -101,14 +103,14 @@ public class AdapteeFactura extends FacturaStrategy {
      */
     public double getTotal() {
         // TODO implement here
-        return 0.0d;
+        return this.total;
     }
 
     /**
      * @param int n 
      * @return
      */
-    public boolean setNumeroAutorización(void int n) {
+    public boolean setNumeroAutorizacion(int n) {
         // TODO implement here
         return false;
     }
@@ -117,7 +119,7 @@ public class AdapteeFactura extends FacturaStrategy {
      * @param String str 
      * @return
      */
-    public boolean setNombreCliente(void String str) {
+    public boolean setNombreCliente(String str) {
         // TODO implement here
         return false;
     }
@@ -126,7 +128,7 @@ public class AdapteeFactura extends FacturaStrategy {
      * @param String clave 
      * @return
      */
-    public boolean setClaveAcceso(void String clave) {
+    public boolean setClaveAcceso(String clave) {
         // TODO implement here
         return false;
     }
@@ -135,16 +137,16 @@ public class AdapteeFactura extends FacturaStrategy {
      * @param Date time 
      * @return
      */
-    public boolean setFecha(void Date time) {
+    public boolean setFecha(Date time) {
         // TODO implement here
         return false;
     }
 
     /**
-     * @param LinkedList productos 
+     * @param LinkedList<String> productos 
      * @return
      */
-    public boolean setProductos(void LinkedList productos) {
+    public boolean setProductos(LinkedList<String> productos) {
         // TODO implement here
         return false;
     }
@@ -153,9 +155,9 @@ public class AdapteeFactura extends FacturaStrategy {
      * @param double can 
      * @return
      */
-    public boolean setTotal(void double can) {
+    public boolean setTotal(double can) {
         // TODO implement here
         return false;
     }
+} 
 
-}

@@ -1,10 +1,6 @@
 package patron.comportamiento;
 
-import java.util.*;
 
-/**
- * 
- */
 public class FacturaStrategy implements DocumentoStrategy {
 
     /**
@@ -20,14 +16,8 @@ public class FacturaStrategy implements DocumentoStrategy {
      */
     public void llenarDocumento() {
         // TODO implement here
-        return null;
+        return;
     }
 
-    /**
-     * 
-     */
-    public void llenarDocumento(): void() {
-        // TODO implement here
-    }
-
+  
 }
