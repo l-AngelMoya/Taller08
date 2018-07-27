@@ -1,11 +1,13 @@
 package patron.creacional;
 
+
 /**
  * 
  */
 public interface Documento {
 
     /**
+     * @return 
      * 
      */
     public void generarDocumento();
@@ -13,16 +15,16 @@ public interface Documento {
     /**
      * 
      */
-    public void setDetallesEmisor();
+    public void setDetallesEmisor(String str);
 
     /**
      * 
      */
-    public void setLogoNegocio();
+    public void setLogoNegocio(String str);
 
     /**
      * 
      */
-    public void setLemaNegocio();
+    public void setLemaNegocio(String str);
 
 }

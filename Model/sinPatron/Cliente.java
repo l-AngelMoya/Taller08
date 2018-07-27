@@ -26,8 +26,7 @@ public class Cliente {
      * @return
      */
     public String getID() {
-        // TODO implement here
-        return this.id;
+    	return this.id;
     }
 
     /**
@@ -35,7 +34,7 @@ public class Cliente {
      * @return
      */
     public boolean setID(String id) {
-        // TODO implement here
+    	this.id=id;
         return false;
     }
 
@@ -43,7 +42,6 @@ public class Cliente {
      * @return
      */
     public String getNombre() {
-        // TODO implement here
         return this.nombre;
     }
 
@@ -52,7 +50,7 @@ public class Cliente {
      * @return
      */
     public boolean setNombre(String str) {
-        // TODO implement here
+        this.nombre=str;
         return false;
     }
 

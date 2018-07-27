@@ -1,5 +1,7 @@
 package patron.estructural;
 
+import java.util.Date;
+import java.util.LinkedList;
 
 /**
  * 
@@ -10,9 +12,22 @@ public class GuiadeRemisionAdapter extends AdapteeFactura {
      * Default constructor
      */
     public GuiadeRemisionAdapter() {
+    	super();
+    	this.destino="desconocido";
+    	this.placa="sin placa";
     }
+    
 
-    /**
+    public GuiadeRemisionAdapter(int numeroAutorizacion, String claveAcceso, String codigo,
+			Date fecha, LinkedList<String> productos, double total, String destino, String placa) {
+		super(numeroAutorizacion, "", claveAcceso, codigo, fecha, productos, total);
+		this.destino=destino;
+		this.placa=placa;
+		
+	}
+
+
+	/**
      * 
      */
     private String destino;
@@ -34,15 +49,14 @@ public class GuiadeRemisionAdapter extends AdapteeFactura {
      * @return
      */
     public boolean setDestino(String str) {
-        // TODO implement here
-        return false;
+        this.destino=str;
+        return true;
     }
 
     /**
      * @return
      */
     public String getPlaca() {
-        // TODO implement here
         return this.placa;
     }
 
@@ -51,8 +65,17 @@ public class GuiadeRemisionAdapter extends AdapteeFactura {
      * @return
      */
     public boolean setPlaca(String str) {
-        // TODO implement here
-        return false;
+        this.placa=str;
+        return true;
     }
+
+
+	@Override
+	public String toString() {
+		return "[ "+ super.toString()+ "destino=" + destino + ", placa=" + placa + ", toString()=" + 
+				"]";
+	}
+
+
 
 }

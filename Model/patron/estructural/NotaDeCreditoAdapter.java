@@ -1,26 +1,38 @@
 package patron.estructural;
 
+import java.util.Date;
+import java.util.LinkedList;
+
 /**
  * 
  */
 public class NotaDeCreditoAdapter extends AdapteeFactura {
-
+	 /**
+     * 
+     */
+    private String detalleModificacion;
     /**
      * Default constructor
      */
     public NotaDeCreditoAdapter() {
+    	super();
+    	this.detalleModificacion="no mod";
     }
+    
+   
 
-    /**
-     * 
-     */
-    private String detalleModificacion;
+    public NotaDeCreditoAdapter(int numeroAutorizacion, String nombreCliente, String claveAcceso, String codigo,
+			Date fecha, double total) {
+		super(numeroAutorizacion, nombreCliente, claveAcceso, codigo, fecha, new LinkedList<String>(), total);
+		
+	}
 
-    /**
+
+
+	/**
      * @return
      */
     public String getDetalle() {
-        // TODO implement here
         return this.detalleModificacion;
     }
     
@@ -28,5 +40,13 @@ public class NotaDeCreditoAdapter extends AdapteeFactura {
     		this.detalleModificacion=detalle;
     		return true;
     }
+
+
+
+	@Override
+	public String toString() {
+		return "["+ super.toString()+"detalleModificacion=" + detalleModificacion
+				+ "]";
+	}
 
 }

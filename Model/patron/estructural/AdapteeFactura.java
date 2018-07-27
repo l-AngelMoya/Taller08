@@ -4,18 +4,14 @@ import java.util.*;
 
 import patron.comportamiento.FacturaStrategy;
 
+
 /**
  * 
  */
 public class AdapteeFactura extends FacturaStrategy {
 
-    /**
-     * Default constructor
-     */
-    public AdapteeFactura() {
-    }
-
-    /**
+	
+	/**
      * 
      */
     private int numeroAutorizacion;
@@ -49,12 +45,35 @@ public class AdapteeFactura extends FacturaStrategy {
      * 
      */
     private double total;
+    /**
+     * Default constructor
+     */
+    public AdapteeFactura() {
+    	this.numeroAutorizacion = 99999;
+		this.nombreCliente = "Consumidor";
+		this.claveAcceso = "9999999999";
+		this.codigo = "9999999999";
+		this.fecha = new Date(); 
+		this.productos = new LinkedList<>();
+		this.total = 0.0;
+    }
+
+    public AdapteeFactura(int numeroAutorizacion, String nombreCliente, String claveAcceso, String codigo, Date fecha,
+			LinkedList<String> productos, double total) {
+		this.numeroAutorizacion = numeroAutorizacion;
+		this.nombreCliente = nombreCliente;
+		this.claveAcceso = claveAcceso;
+		this.codigo = codigo;
+		this.fecha = fecha;
+		this.productos = productos;
+		this.total = total;
+	}
+
 
     /**
      * @return
      */
     public int getNumeroAutorizacion() {
-        // TODO implement here
         return this.numeroAutorizacion;
     }
 
@@ -62,7 +81,6 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public String getNombreCliente() {
-        // TODO implement here
         return this.nombreCliente;
     }
 
@@ -70,7 +88,6 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public String getClaveAcceso() {
-        // TODO implement here
         return this.claveAcceso;
     }
 
@@ -78,7 +95,6 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public String getCodigo() {
-        // TODO implement here
         return this.codigo;
     }
 
@@ -86,7 +102,6 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public Date getFecha() {
-        // TODO implement here
         return this.fecha;
     }
 
@@ -94,7 +109,6 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public LinkedList<String> getProductos() {
-        // TODO implement here
         return this.productos;
     }
 
@@ -102,7 +116,6 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public double getTotal() {
-        // TODO implement here
         return this.total;
     }
 
@@ -111,8 +124,8 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public boolean setNumeroAutorizacion(int n) {
-        // TODO implement here
-        return false;
+        this.numeroAutorizacion=n;
+        return true;
     }
 
     /**
@@ -120,8 +133,8 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public boolean setNombreCliente(String str) {
-        // TODO implement here
-        return false;
+    	this.nombreCliente=str;
+    	return true;
     }
 
     /**
@@ -129,8 +142,8 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public boolean setClaveAcceso(String clave) {
-        // TODO implement here
-        return false;
+    	this.claveAcceso=clave;
+    	return true;
     }
 
     /**
@@ -138,8 +151,8 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public boolean setFecha(Date time) {
-        // TODO implement here
-        return false;
+    	this.fecha=time;
+    	return true;
     }
 
     /**
@@ -147,8 +160,8 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public boolean setProductos(LinkedList<String> productos) {
-        // TODO implement here
-        return false;
+        this.productos=productos;
+    	return true;
     }
 
     /**
@@ -156,8 +169,17 @@ public class AdapteeFactura extends FacturaStrategy {
      * @return
      */
     public boolean setTotal(double can) {
-        // TODO implement here
-        return false;
+        this.total=can;
+        return true;
     }
+
+	@Override
+	public String toString() {
+		return "[numeroAutorizacion=" + numeroAutorizacion + ", nombreCliente=" + nombreCliente
+				+ ", claveAcceso=" + claveAcceso + ", codigo=" + codigo + ", fecha=" + fecha + ", productos="
+				+ productos + ", total=" + total + "]";
+	}
+
+	
 } 
 
